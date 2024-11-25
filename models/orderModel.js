@@ -11,8 +11,8 @@ const order = new Schema({
       quantity: { type: Number, min: 1 }
     }
   ],
-  total: { type: Number, min: 0}
-}, { timestamps: true }); 
-
+  total: { type: Number, min: 0},
+  status: { type: Boolean, default: false }
+}, { timestamps: true });
 
 module.exports = mongoose.models.order || mongoose.model("order", order);

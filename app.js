@@ -26,7 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 mongoose
-  .connect("mongodb+srv://toibietemkhongbiet:jRrrtvyfh7SiJhY@cluster0.zpgih.mongodb.net/asm")
+  .connect("mongodb://localhost:27017/asm")
+  // .connect("mongodb+srv://toibietemkhongbiet:jRrrtvyfh7SiJhY@cluster0.zpgih.mongodb.net/asm")
   .then( ( ) => {console.log(">>> DB CONNECTED!!!!!!!!");})
   .catch((e) => {console.log(`>>> DB Error: ${e.message}`);});
 
