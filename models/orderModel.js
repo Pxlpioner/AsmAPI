@@ -14,4 +14,5 @@ const order = new Schema({
   total: { type: Number, min: 0}
 }, { timestamps: true }); 
 
+
 module.exports = mongoose.models.order || mongoose.model("order", order);
